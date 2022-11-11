@@ -49,8 +49,13 @@ function Home() {
     return (
 
     <div>
+        <div class="current-user">
+            <h1>
+                Current User
+            </h1>
+        </div>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-2">
                 <div class = "img-tag">
                     <img src={zendaya} alt = "Kosi's image should be here"/>
                 </div>    
@@ -63,7 +68,6 @@ function Home() {
                     </p>
                 </div>
             </div>
-  
         </div>
 
         <div class = "row">
@@ -71,14 +75,33 @@ function Home() {
                 <UserForm updateProfile={updateProfile}/>
             </div>
             <hr/>
+            <div class="all-users">
+                <h1>
+                    All Users Profile
+                </h1>
+            </div>
             <div>
-                {users.map((usr,index)=>
-                    <div style={{marginButtom: 10}}>
-                         <img src={zendaya} alt = "Kosi's image should be here"/>
-                         <div>{usr.name}</div>
-                         <div>{usr.bio}</div>
-                         <div>{usr.email}</div>
+                {users.map((usr,index)=>                   
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class = "img2-tag">
+                                <img src={zendaya} alt = "Kosi's image should be here"/>
+                            </div>    
+                        </div>
+                        <div class="col-sm-8 bio-tag">
+                            <div>
+                                <h1>{usr.name}</h1>
+                                <h6>{usr.email}</h6>
+                            </div>
+                            <div class ="biography">
+                                <p>
+                                {usr.bio}
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
+
                 )}
             </div>
             <div class="col-md-12">

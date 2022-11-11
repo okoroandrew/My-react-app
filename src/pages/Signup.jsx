@@ -27,19 +27,19 @@ export default function Signup(props) {
             <form style={{display: 'flex', flexDirection: 'column'}} onSubmit={(e)=> signupUser(e)}>
                 <div class="form-group">
                     <label class="sr-only" for="name">Full Name:</label>
-                    <input onChange={(e)=>setUser({...user, name: e.target.value})} class="form-control custom_input"/>
+                    <input onChange={(e)=>setUser({...user, name: e.target.value})} class="form-control custom_input_signup"/>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="name">Email:</label>
-                    <input onChange={(e)=>setUser({...user, email: e.target.value})} class="form-control custom_input"/>
+                    <input onChange={(e)=>setUser({...user, email: e.target.value})} class="form-control custom_input_signup"/>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="name">Password:</label>
-                    <input onChange={(e)=>setUser({...user, password: e.target.value})} class="form-control custom_input"/>
+                    <input onChange={(e)=>setUser({...user, password: e.target.value})} class="form-control custom_input_signup"/>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="Biography">Biography</label>
-                    <textarea onChange={(e)=>setUser({...user, bio: e.target.value})} class="form-control custom_input" placeholder="Please Enter you biography"></textarea>
+                    <textarea onChange={(e)=>setUser({...user, bio: e.target.value})} class="form-control custom_input_signup" placeholder="Please Enter you biography"></textarea>
                 </div>
                 <button type="submit" id= "custom_btn1" class="btn btn-default">Signup</button>
             </form>
