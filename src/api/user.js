@@ -1,12 +1,14 @@
 import axios from "axios"
 
+const apiURL = process.env.REACT_APP_API_URL
+
 export const getProfile=async()=>{
-    const getUser=await axios.get("http://localhost:3000/users/profile")
+    const getUser=await axios.get(`${apiURL}/users/profile`)
     return getUser.data        
 }
 
-export const postProfile=async(name, biography)=>{
-    const newUser=await axios.post("http://localhost:3000/users/profile", {name, biography})
+export const postProfile=async(name, bio)=>{
+    const newUser=await axios.put(`${apiURL}/users/update-user`, {name, bio})
     return newUser.data        
 }
 
@@ -26,4 +28,19 @@ const options = {
 export const getNews=async()=>{
     const news = await axios.request(options)
     return news.data
+}
+
+export const signup = async (user) => {
+  const signedUpUser = await axios.post(`${apiURL}/users/signup`, user)
+  return signedUpUser.data
+}
+
+export const login = async (user) => {
+  const loggedInUser = await axios.post(`${apiURL}/users/login`, user)
+  return loggedInUser.data
+}
+
+export const getUsers = async () => {
+  const allUsers = await axios.get(`${apiURL}/users/get-users`)
+  return allUsers.data
 }
