@@ -22,8 +22,13 @@ export default function Signup(props) {
        
     }
 
-    return(
-        <div class="col-md-4 signup_login-tag">
+    return(     
+        <div class="col-md-12 signup_login-tag">
+            <div class="topnav">
+                <a class="active" href="/">Profiles</a>
+                <a href="/login">Login</a>
+                <a href="/signup">SignUp</a>
+            </div> 
             <form style={{display: 'flex', flexDirection: 'column'}} onSubmit={(e)=> signupUser(e)}>
                 <div class="form-group">
                     <label class="sr-only" for="name">Full Name:</label>

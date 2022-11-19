@@ -49,6 +49,11 @@ function Home() {
     return (
 
     <div>
+        <div class="topnav">
+            <a class="active" href="/">Profiles</a>
+            <a href="/login">Login</a>
+            <a href="/signup">SignUp</a>
+        </div>     
         <div class="current-user">
             <h1>
                 Current User
