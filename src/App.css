@@ -24,7 +24,7 @@
   height: 200px;
   width: 200px;
   border: 1px solid gray; 
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
 .all-users h1{
@@ -43,7 +43,7 @@
   height: 200px;
   width: 200px;
   border: 1px solid gray; 
-  margin-left: 50px;
+  margin-left: 40px;
   margin-bottom: 80px;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .custom_form{
-  margin-left: 50px;
+  margin-left: 40px;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -94,6 +94,7 @@
 .topnav {
   background-color: #333;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 /* Style the links inside the navigation bar */
@@ -114,6 +115,6 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: solid blue;
+  background-color: solid rgb(60, 0, 255);
   color: white;
 }

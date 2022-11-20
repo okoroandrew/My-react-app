@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {signup} from '../api/user'
 import { setAuthToken } from '../utils/setAuthToken'
 import {useNavigate} from 'react-router-dom'
+import Header from "../components/Header";
 
 export default function Signup(props) {
     const navigate = useNavigate()
@@ -22,13 +23,10 @@ export default function Signup(props) {
        
     }
 
-    return(     
-        <div class="col-md-12 signup_login-tag">
-            <div class="topnav">
-                <a class="active" href="/">Profiles</a>
-                <a href="/login">Login</a>
-                <a href="/signup">SignUp</a>
-            </div> 
+    return( 
+        <>
+        <Header/>    
+        <div class="col-md-4 signup_login-tag"> 
             <form style={{display: 'flex', flexDirection: 'column'}} onSubmit={(e)=> signupUser(e)}>
                 <div class="form-group">
                     <label class="sr-only" for="name">Full Name:</label>
@@ -49,5 +47,6 @@ export default function Signup(props) {
                 <button type="submit" id= "custom_btn1" class="btn btn-default">Signup</button>
             </form>
         </div>
+        </>
     ) 
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {login} from '../api/user'
 import { setAuthToken } from '../utils/setAuthToken'
 import {useNavigate} from 'react-router-dom'
+import Header from "../components/Header";
 
 export default function Login(props) {
     const navigate = useNavigate()
@@ -24,12 +25,9 @@ export default function Login(props) {
     }
 
     return(
-        <div class="col-md-12 signup_login-tag">
-            <div class="topnav">
-                <a class="active" href="/">Profiles</a>
-                <a href="/login">Login</a>
-                <a href="/signup">SignUp</a>
-            </div> 
+        <>
+        <Header/>
+        <div class="col-md-4 signup_login-tag">
             <form style={{display: 'flex', flexDirection: 'column'}} onSubmit={(e)=> loginUser(e)}>
                 <div class="form-group">
                     <label class="sr-only" for="name">Email:</label>
@@ -43,5 +41,6 @@ export default function Login(props) {
             </form>
 
         </div>
+        </>
     )
 }

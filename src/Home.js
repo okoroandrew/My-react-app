@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import UserForm from "./components/UserForm";
 import {getProfile, postProfile, getNews, getUsers} from "./api/user"
 import { useNavigate } from 'react-router-dom'
+import Header from "./components/Header";
 
 
 function Home() {
@@ -49,11 +50,7 @@ function Home() {
     return (
 
     <div>
-        <div class="topnav">
-            <a class="active" href="/">Profiles</a>
-            <a href="/login">Login</a>
-            <a href="/signup">SignUp</a>
-        </div>     
+        <Header/>    
         <div class="current-user">
             <h1>
                 Current User
